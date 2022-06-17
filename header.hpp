@@ -1,7 +1,10 @@
 #ifndef _HEADER_H
 #define _HEADER_H
-
 #include <iostream>
+#include <cstdlib>
+#include <string>
+
+
 using namespace std;
 
 
