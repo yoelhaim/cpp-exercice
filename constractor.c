@@ -1,8 +1,5 @@
 #include "header.hpp"
-#define string std::string
-#define cin std::cin
-#define print std::cout 
-#define nl std::endl 
+
 class OBJ {
     public :
         string f_name;
