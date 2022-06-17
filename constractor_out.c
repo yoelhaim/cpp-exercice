@@ -17,19 +17,22 @@ OBJ::OBJ(string f, string l, string n)
     l_name = l;
     number = n;
 }
-void err_number()
+int err_number()
 {
 
-    print << "Error allowed this number try again" << nl;
+    print << "\x1B[31m"
+          << "Error allowed this number try again"
+          << "\x1B[32m" << nl;
     exit(1);
+    // return 0;
 }
 int checknumer(string number)
 {
 
     int i = 0;
-    // int len = strlen34(number);
-    // if (len < 10 || len > 12)
-    //     err_number();
+    int len = number.length();
+    if (len < 10 || len > 15)
+        err_number();
     while (number[i])
     {
         if (number[i] >= '0' && number[i] <= '9')
@@ -39,27 +42,57 @@ int checknumer(string number)
     }
     return (1);
 }
+void add_contact(string f, string l, string n)
+{
+    char arr[10];
+    arr[0] = 1;
+    arr[1] = 2;
+    arr[2] = 3;
+    arr[3] = '\0';
+}
 int main()
 {
-    string type;
-    cin >> type;
-    if (type == "ADD")
+    while (1)
     {
-        string fname;
-        print << "first name : ";
-        cin >> fname;
-        string lname;
-        print << "last name : ";
-        cin >> lname;
-        print << "number  : ";
-        string n;
-        cin >> n;
-        OBJ constr(fname, lname, n);
-        checknumer(n);
-        print << "--------------------" << nl;
-        print << "first name : " << constr.f_name << nl;
-        print << "last name  : " << constr.l_name << nl;
-        print << "number     : " << constr.number << nl;
+        string type;
+        cin >> type;
+        if (type == "ADD")
+        {
+            string fname;
+            print << "first name : ";
+            cin >> fname;
+            string lname;
+            print << "last name : ";
+            cin >> lname;
+            print << "number  : ";
+            string n;
+            cin >> n;
+            OBJ constr(fname, lname, n);
+            checknumer(n);
+            add_contact(constr.f_name, constr.l_name, constr.number);
+            print << "\x1B[32m"
+                  << "-------- successfully add contact ! -------"
+                  << "\x1B[0m" << nl;
+            print << "first name : " << constr.f_name << nl;
+            print << "last name  : " << constr.l_name << nl;
+            print << "number     : " << constr.number << nl;
+        }
+        else if (type == "EXIT")
+            exit(1);
+        else if (type == "SEARCH")
+        {
+            print << "type f  or l name  Or nickname" << nl;
+            string sr;
+            cin >> sr;
+            print << sr << nl;
+        }
+        else
+        {
+
+            print << "\x1B[41m"
+                  << "Error " << type << " commond not found try again !"
+                  << "\x1B[0m" << nl;
+        }
     }
 
     return 0;
