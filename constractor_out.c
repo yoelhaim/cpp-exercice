@@ -73,12 +73,12 @@ int main()
             add_contact(constr.f_name, constr.l_name, constr.number);
             print << "\x1B[32m"
                   << "-------- successfully add contact ! -------"
-                  << "\x1B[0m" << nl;
-            print << "first name : " << constr.f_name << nl;
-            print << "last name  : " << constr.l_name << nl;
-            print << "number     : " << constr.number << nl;
+                  << "\x1B[0m" << nl;                        // message add contacts succss
+            print << "first name : " << constr.f_name << nl; // printf value of first name
+            print << "last name  : " << constr.l_name << nl; // print value of last name
+            print << "number     : " << constr.number << nl; // print value of number phone
         }
-        else if (type == "EXIT")
+        else if (type == "EXIT") // check if exiting program
             exit(1);
         else if (type == "SEARCH")
         {
