@@ -7,12 +7,12 @@
 class OBJ
 {
 public:
-    string f_name; // first name
-    string l_name; // last name
-    string number; // number phone
-    OBJ(string f, string l, string n);
+    string f_name;                     // first name
+    string l_name;                     // last name
+    string number;                     // number phone
+    OBJ(string f, string l, string n); // constractor  class
 };
-OBJ::OBJ(string f, string l, string n)
+OBJ::OBJ(string f, string l, string n) // this is constractor outline
 {
     f_name = f; // add value to first name
     l_name = l; // add value to last name
