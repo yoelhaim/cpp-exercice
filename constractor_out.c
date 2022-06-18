@@ -80,14 +80,14 @@ int main()
         }
         else if (type == "EXIT") // check if exiting program
             exit(1);
-        else if (type == "SEARCH")
+        else if (type == "SEARCH") // search method
         {
             print << "type f  or l name  Or nickname" << nl;
             string sr;
             cin >> sr;
             print << sr << nl;
         }
-        else
+        else // check its comment not found
         {
 
             print << "\x1B[41m"
