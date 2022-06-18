@@ -14,9 +14,9 @@ public:
 };
 OBJ::OBJ(string f, string l, string n)
 {
-    f_name = f;
-    l_name = l;
-    number = n;
+    f_name = f; // add value to first name
+    l_name = l; // add value to last name
+    number = n; // add value to number phone
 }
 int err_number()
 {
