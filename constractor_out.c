@@ -1,4 +1,5 @@
 #include "header.hpp"
+
 #define string std::string
 #define cin std::cin
 #define print std::cout
@@ -6,9 +7,9 @@
 class OBJ
 {
 public:
-    string f_name;
-    string l_name;
-    string number;
+    string f_name; // first name
+    string l_name; // last name
+    string number; // number phone
     OBJ(string f, string l, string n);
 };
 OBJ::OBJ(string f, string l, string n)
