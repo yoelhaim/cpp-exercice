@@ -95,6 +95,5 @@ int main()
                   << "\x1B[0m" << nl;
         }
     }
-
     return 0;
 }
